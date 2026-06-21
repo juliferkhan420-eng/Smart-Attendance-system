@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Smart Attendance System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container-lg">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <i class="fas fa-check-circle text-primary"></i> SmartAttend
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="students.html">Students</a></li>
+                    <li class="nav-item"><a class="nav-link" href="attendance.html">Attendance</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reports.html">Reports</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin.html">Admin</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-lg py-5">
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto">
+                <div class="dashboard-header">
+                    <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+                    <p>Get in touch with our support team</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 mx-auto mb-5">
+                <div class="card shadow">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="fas fa-paper-plane"></i> Send Message</h5>
+                    </div>
+                    <div class="card-body">
+                        <form onsubmit="handleContactForm(event)">
+                            <div class="form-group">
+                                <label class="form-label">Your Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Subject</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-control" rows="5" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100">
+                                <i class="fas fa-send"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mx-auto mb-5">
+                <div class="card shadow">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="fas fa-info-circle"></i> Contact Information</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <h6 class="mb-2"><i class="fas fa-map-marker-alt text-primary"></i> Address</h6>
+                            <p class="text-muted mb-0">123 University Lane<br>Education City, ED 12345<br>Country</p>
+                        </div>
+
+                        <div class="mb-4">
+                            <h6 class="mb-2"><i class="fas fa-envelope text-primary"></i> Email</h6>
+                            <p class="text-muted mb-0">
+                                <a href="mailto:support@smartattend.edu" class="text-decoration-none">support@smartattend.edu</a><br>
+                                <a href="mailto:info@smartattend.edu" class="text-decoration-none">info@smartattend.edu</a>
+                            </p>
+                        </div>
+
+                        <div class="mb-4">
+                            <h6 class="mb-2"><i class="fas fa-phone text-primary"></i> Phone</h6>
+                            <p class="text-muted mb-0">
+                                <a href="tel:+1234567890" class="text-decoration-none">+1 (234) 567-8900</a><br>
+                                <a href="tel:+9876543210" class="text-decoration-none">+98 (765) 432-1098</a>
+                            </p>
+                        </div>
+
+                        <div class="mb-0">
+                            <h6 class="mb-2"><i class="fas fa-clock text-primary"></i> Office Hours</h6>
+                            <p class="text-muted mb-0">
+                                Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                Saturday: 10:00 AM - 4:00 PM<br>
+                                Sunday: Closed
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container-lg">
+            <div class="row g-5 mb-5">
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">About Us</h6>
+                    <p>Smart Attendance Management System for educational institutions.</p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html" class="text-white-50 text-decoration-none">Home</a></li>
+                        <li><a href="students.html" class="text-white-50 text-decoration-none">Students</a></li>
+                        <li><a href="attendance.html" class="text-white-50 text-decoration-none">Attendance</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="contact.html" class="text-white-50 text-decoration-none">Contact Us</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="bg-white-50">
+            <div class="text-center text-white-50">
+                <p>&copy; 2024 Smart Attendance Management System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        function handleContactForm(event) {
+            event.preventDefault();
+            showAlert('Thank you for your message! We will get back to you soon.', 'success');
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>

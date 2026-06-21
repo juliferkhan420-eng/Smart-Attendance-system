@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Smart Attendance System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container-lg">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <i class="fas fa-check-circle text-primary"></i> SmartAttend
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="students.html">Students</a></li>
+                    <li class="nav-item"><a class="nav-link" href="attendance.html">Attendance</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reports.html">Reports</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="admin.html">Admin</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-lg py-5">
+        <div class="row mb-5">
+            <div class="col-lg-12">
+                <div class="dashboard-header">
+                    <h2><i class="fas fa-tachometer-alt"></i> Admin Dashboard</h2>
+                    <p>System overview and analytics</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="dashboardContent">
+            <div class="row mb-5">
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-primary"><i class="fas fa-users"></i></div>
+                        <h3 class="stat-value" id="adminTotalStudents">0</h3>
+                        <p class="stat-label">Total Students</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-info"><i class="fas fa-file-alt"></i></div>
+                        <h3 class="stat-value" id="adminTotalRecords">0</h3>
+                        <p class="stat-label">Attendance Records</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-success"><i class="fas fa-chart-pie"></i></div>
+                        <h3 class="stat-value" id="adminAvgAttendance">0%</h3>
+                        <p class="stat-label">Average Attendance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-lg-12">
+                <div class="card shadow">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="fas fa-chart-line"></i> System Statistics</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <h6>Recent Activity</h6>
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <i class="fas fa-user-plus text-primary"></i> New student registered
+                                        <span class="badge bg-info float-end">Today</span>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <i class="fas fa-clipboard-check text-success"></i> Attendance marked
+                                        <span class="badge bg-success float-end">Today</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Quick Stats</h6>
+                                <div class="text-center p-4 bg-light rounded">
+                                    <p class="mb-2"><strong>System Status</strong></p>
+                                    <p class="mb-0"><span class="badge bg-success">All Systems Operational</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card shadow">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="fas fa-cog"></i> Analytics Configuration</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-info">
+                            <h6><i class="fas fa-chart-line"></i> Google Analytics Setup</h6>
+                            <p>To enable analytics tracking, update your Google Analytics Measurement ID in the index.html file:</p>
+                            <code>gtag('config', 'G-XXXXXXXXXX');</code>
+                            <p class="mt-3 mb-0"><small>Replace 'G-XXXXXXXXXX' with your actual Measurement ID from Google Analytics</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container-lg">
+            <div class="row g-5 mb-5">
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">About Us</h6>
+                    <p>Smart Attendance Management System for educational institutions.</p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html" class="text-white-50 text-decoration-none">Home</a></li>
+                        <li><a href="students.html" class="text-white-50 text-decoration-none">Students</a></li>
+                        <li><a href="attendance.html" class="text-white-50 text-decoration-none">Attendance</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="contact.html" class="text-white-50 text-decoration-none">Contact Us</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="bg-white-50">
+            <div class="text-center text-white-50">
+                <p>&copy; 2024 Smart Attendance Management System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        function updateAdminDashboard() {
+            const students = JSON.parse(localStorage.getItem('smartAttend_students')) || [];
+            const attendance = JSON.parse(localStorage.getItem('smartAttend_attendance')) || [];
+            
+            let totalAttendance = 0;
+            students.forEach(student => {
+                const studentAtt = attendance.filter(a => a.studentId === student.id);
+                const present = studentAtt.filter(a => a.status === 'present').length;
+                const late = studentAtt.filter(a => a.status === 'late').length;
+                const total = studentAtt.length;
+                if (total > 0) {
+                    totalAttendance += ((present + late * 0.5) / total * 100);
+                }
+            });
+            
+            const avgAttendance = students.length > 0 ? (totalAttendance / students.length).toFixed(1) : 0;
+            
+            document.getElementById('adminTotalStudents').textContent = students.length;
+            document.getElementById('adminTotalRecords').textContent = attendance.length;
+            document.getElementById('adminAvgAttendance').textContent = avgAttendance + '%';
+        }
+        updateAdminDashboard();
+    </script>
+</body>
+</html>
