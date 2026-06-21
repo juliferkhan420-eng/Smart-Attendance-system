@@ -1,0 +1,30 @@
+# Smart Attendance Management System - robots.txt
+# https://www.robotstxt.org/
+
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /.env
+Disallow: /.git
+Disallow: /node_modules/
+
+# Allow search engines
+Allow: /pages/
+Allow: /assets/
+
+# Specify sitemap
+Sitemap: https://yourdomain.com/sitemap.xml
+
+# Crawl delay for bots
+Crawl-delay: 1
+
+# Allow specific bots
+User-agent: Googlebot
+Crawl-delay: 0
+Allow: /
+
+User-agent: Bingbot
+Crawl-delay: 1
+Allow: /
