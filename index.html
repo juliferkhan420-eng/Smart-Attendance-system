@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Attendance Management System - University Edition</title>
+    <meta name="description" content="Professional Smart Attendance Management System for educational institutions">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        // Replace 'G-XXXXXXXXXX' with your actual Google Analytics Measurement ID
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container-lg">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="fas fa-check-circle text-primary"></i> SmartAttend
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/students.html">Students</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/attendance.html">Attendance</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/reports.html">Reports</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/admin.html">Admin</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section py-5">
+        <div class="container-lg">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h1 class="display-4 fw-bold mb-4">Smart Attendance Management System</h1>
+                    <p class="lead mb-4">Streamline your educational institution's attendance tracking with our modern, professional platform. Real-time monitoring, comprehensive analytics, and effortless management.</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="pages/students.html" class="btn btn-primary btn-lg">
+                            <i class="fas fa-user-plus"></i> Register Student
+                        </a>
+                        <a href="pages/attendance.html" class="btn btn-outline-primary btn-lg">
+                            <i class="fas fa-clipboard-check"></i> Mark Attendance
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="hero-illustration">
+                        <i class="fas fa-users" style="font-size: 120px; color: #2563EB; opacity: 0.1;"></i>
+                        <i class="fas fa-chart-pie" style="font-size: 100px; color: #10B981; opacity: 0.1; margin-left: -40px; margin-top: 20px;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Cards -->
+    <section class="statistics-section py-5 bg-light">
+        <div class="container-lg">
+            <h2 class="text-center mb-5 fw-bold">System Overview</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-primary">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="stat-value" id="totalStudents">0</h3>
+                        <p class="stat-label">Total Students</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-success">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3 class="stat-value" id="presentStudents">0</h3>
+                        <p class="stat-label">Present Today</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-danger">
+                            <i class="fas fa-times-circle"></i>
+                        </div>
+                        <h3 class="stat-value" id="absentStudents">0</h3>
+                        <p class="stat-label">Absent Today</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-info">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <h3 class="stat-value" id="attendancePercent">0%</h3>
+                        <p class="stat-label">Overall Attendance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section py-5">
+        <div class="container-lg">
+            <h2 class="text-center mb-5 fw-bold">Key Features</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <h5>Quick Registration</h5>
+                        <p>Easily register students with complete profile information including ID, contact details, and photo upload.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h5>Attendance Tracking</h5>
+                        <p>Mark attendance in real-time with automatic date and time recording. Support for Present, Absent, and Late statuses.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h5>Comprehensive Reports</h5>
+                        <p>Generate detailed reports daily, weekly, or monthly. Download as PDF for official records and analysis.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h5>Smart Search</h5>
+                        <p>Quickly find students with advanced search and filter functionality across the entire database.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h5>Responsive Design</h5>
+                        <p>Access from any device - desktop, tablet, or mobile. Fully responsive and optimized for all screen sizes.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h5>Secure Data</h5>
+                        <p>Your data is protected with modern security practices ensuring privacy and integrity of student information.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analytics Setup Section -->
+    <section class="analytics-section py-5 bg-light">
+        <div class="container-lg">
+            <h2 class="text-center mb-5 fw-bold">Analytics Integration</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-5">
+                            <h5 class="card-title mb-4"><i class="fas fa-chart-line text-primary"></i> Google Analytics Configuration</h5>
+                            <p class="mb-4">To enable analytics tracking and monitor system usage:</p>
+                            <ol class="mb-4">
+                                <li>Get your Google Analytics <strong>Measurement ID</strong> (format: G-XXXXXXXXXX)</li>
+                                <li>Replace the placeholder ID in the script tag at the top of this page</li>
+                                <li>The system will automatically track:
+                                    <ul class="mt-2">
+                                        <li>Total website visitors</li>
+                                        <li>Unique visitors</li>
+                                        <li>Page views and user flow</li>
+                                        <li>User locations and device types</li>
+                                        <li>Traffic sources</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <div class="alert alert-info">
+                                <strong>Current Measurement ID:</strong> <code>G-XXXXXXXXXX</code> (Update this with your actual ID)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container-lg">
+            <div class="row g-5 mb-5">
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">About Us</h6>
+                    <p>Smart Attendance Management System is a professional solution designed for educational institutions to streamline attendance tracking and management.</p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white-50 text-decoration-none">Home</a></li>
+                        <li><a href="pages/students.html" class="text-white-50 text-decoration-none">Students</a></li>
+                        <li><a href="pages/attendance.html" class="text-white-50 text-decoration-none">Attendance</a></li>
+                        <li><a href="pages/reports.html" class="text-white-50 text-decoration-none">Reports</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="pages/contact.html" class="text-white-50 text-decoration-none">Contact Us</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Documentation</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="bg-white-50">
+            <div class="text-center text-white-50">
+                <p>&copy; 2024 Smart Attendance Management System. All rights reserved. | University Edition</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
