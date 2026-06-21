@@ -1,0 +1,83 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+.atom/
+.project
+.classpath
+.c9/
+*.cer
+*.csr
+*.jks
+
+# Node and npm
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Build files
+dist/
+build/
+*.min.js
+*.min.css
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# OS specific
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# System files
+*.exe
+*.dll
+*.dylib
+*.so
+
+# IDE specific
+.editorconfig
+.eslintignore
+.prettierignore
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Production
+.next/
+out/
